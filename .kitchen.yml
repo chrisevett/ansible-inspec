@@ -1,0 +1,36 @@
+---
+driver:
+  name: docker
+  use_sudo: false
+  privileged: true
+
+provisioner:
+  hosts: webservers
+  name: ansible_playbook
+  # Use el7 epel repo instead of the default el6
+  ansible_yum_repo: "https://download.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm"
+  require_chef_for_busser: false
+  require_ruby_for_busser: false
+  ansible_verbosity: 2
+  ansible_verbose: true
+
+verifier:
+  name: inspec
+
+platforms:
+- name: centos7
+  driver:
+    image: centos/ruby-24-centos7
+    run_options: -u 0:0
+    platform: centos
+    build_user: root
+
+- name: ubuntu16 
+  driver:
+    image: ruby
+    run_options: -u 0:0
+    platform: debian 
+    build_user: root
+
+suites:
+  - name: default 

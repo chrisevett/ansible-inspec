@@ -1,0 +1,7 @@
+---
+- name: wrapper playbook for testing inspec role
+  hosts: webservers
+  roles:
+    - inspec 
+  vars:
+    inspecVersion: 1.48.0

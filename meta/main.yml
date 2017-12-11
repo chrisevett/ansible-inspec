@@ -1,0 +1,24 @@
+galaxy_info:
+  author: chris evett
+  description: installs inspec 
+
+  license: MIT
+
+  min_ansible_version: 2.0
+  platforms:
+  - name: EL
+    versions:
+    - 6
+    - 7
+  - name: Debian
+    versions:
+    - all
+  - name: Ubuntu
+    versions:
+    - all
+  categories:
+    - system
+
+  galaxy_tags: []
+
+dependencies: []
