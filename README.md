@@ -3,22 +3,16 @@ Inspec
 Installs inspec.
 
 
-Requirements
-------------
-
-Requires a supproted version of ruby. Tested on ansible 2+
-
 Role Variables
 --------------
-
-inspecVersion: 1.48.0
+inspecVersion: 2.1.10
 
 Example Playbook
 ----------------
 
     - hosts: servers
       roles:
-         - { role: chrisevett.inspec, inspecVersion: 1.48.0 }
+         - { role: chrisevett.inspec, inspecVersion: 2.1.10 }
 
 License
 -------

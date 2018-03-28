@@ -2,6 +2,6 @@
 - name: wrapper playbook for testing inspec role
   hosts: webservers
   roles:
-    - inspec 
+    - ansible-inspec 
   vars:
-    inspecVersion: 1.48.0
+    inspecVersion: 2.1.10

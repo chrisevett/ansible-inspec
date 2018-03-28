@@ -18,19 +18,8 @@ verifier:
   name: inspec
 
 platforms:
-- name: centos7
-  driver:
-    image: centos/ruby-24-centos7
-    run_options: -u 0:0
-    platform: centos
-    build_user: root
-
-- name: ubuntu16 
-  driver:
-    image: ruby
-    run_options: -u 0:0
-    platform: debian 
-    build_user: root
+- name: centos-7
+- name: ubuntu-16.04
 
 suites:
   - name: default 
